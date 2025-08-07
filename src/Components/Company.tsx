@@ -14,7 +14,7 @@ const Company = ({ companyTypes }: { companyTypes: Business }) => {
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      viewport={{ once: true, amount: 0.3 }} //
+      viewport={{ once: true, amount: 0.3 }}
     >
       <div className="w-10 h-10 bg-[#F9BA14] text-[#026300] rounded-full flex items-center justify-center text-[150%]">
         {companyTypes.Icons}

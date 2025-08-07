@@ -55,6 +55,7 @@ const Privacy_Policy = () => {
     },
   ]);
   return (
+
     <div className="bg-slate-200">
       <motion.div
         className="px-8 py-8 flex flex-col gap-6 max-w-5xl mx-auto"
@@ -93,6 +94,7 @@ const Privacy_Policy = () => {
           </motion.div>
         ))}
       </motion.div>
+
     </div>
   );
 };
