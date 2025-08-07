@@ -1,8 +1,6 @@
 import { useState } from "react";
-import phoen from "../Images/cta-bg.jpg";
-import Carousel from "./Carousel";
 import { motion } from "motion/react";
-
+import frame from "../Images/GREEN STAR LOGO.svg";
 type dataProps = {
   name: string;
   store: string;
@@ -41,41 +39,47 @@ const Testimonials = () => {
         "My business has increased many folds with the help of Green Star, now I can manage all telecom operators with single login. Now I am able to give time to my family.",
     },
   ]);
+  const [mouseOver, setIsMouseOver] = useState(false);
+
   return (
-    <section className="relative w-full h-[80vh] overflow-hidden flex justify-around items-center">
-      <img
-        src={phoen}
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover object-center blur-xs"
-      />
-
-      <div className="absolute inset-0 bg-black/40 z-10" />
-
-      <motion.div
-        whileInView={{ opacity: 1, y: 0, x: 0 }}
-        initial={{ opacity: 0, x: 500 }}
-        transition={{ duration: 1.5 }}
-        className="relative z-20 flex justify-center items-center p-0 min-h-screen"
+    <div className="overflow-hidden w-full p-10 bg-slate-200">
+      <div
+        style={{ animationPlayState: mouseOver ? "paused" : "running" }}
+        className={`flex animate-marquee w-max`}
       >
-        <Carousel
-          CarouselData={data.map((item, index) => (
-            <motion.div
-              key={index}
-              className="flex flex-col items-center text-center gap-8 px-7 py-7 rounded-xl text-white bg-opacity-90 shadow-2xl border border-gray-200 max-w-md mx-auto transition-all duration-300 "
-            >
-              <div className="text-center w-full">
-                <h3 className="text-2xl font-semibold ">{item.name}</h3>
-                <h4 className="text-xl">{item.store}</h4>
-              </div>
-
-              <p className="italic relative pl-6 before:content-['-“'] before:absolute before:left-0 before:text-3xl before:text-green-500 after:content-['”'] after:text-green-500">
-                {item.description}
-              </p>
+        {[...data, ...data].map((item, index) => (
+          <div
+            onMouseEnter={() => setIsMouseOver(true)}
+            onMouseLeave={() => setIsMouseOver(false)}
+            key={`item-${index}`}
+            className="w-[100vw] sm:w-[50vw] md:w-[33.3333vw] flex-shrink-0 flex flex-col p-3 rounded-[20px] shadow-2xl items-center text-center font-medium mx-2 gap-3 bg-white"
+          >
+            <img src={frame} alt="logo_Green_Star" className="w-[20%]" />
+            <p className="text-[1rem]">{item.description}</p>
+            <motion.div className="border-t-2 w-[80%] flex flex-col pt-3">
+              <motion.h2
+                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: -20 }}
+                transition={{ duration: 1.5 }}
+                viewport={{ once: true }}
+                className="text-green-600 text-[1.5rem]"
+              >
+                {item.name}
+              </motion.h2>
+              <motion.p
+                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: -20 }}
+                transition={{ duration: 1.5 }}
+                viewport={{ once: true }}
+                className="text-[1.1rem] text-yellow-600"
+              >
+                {item.store}
+              </motion.p>
             </motion.div>
-          ))}
-        />
-      </motion.div>
-    </section>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 

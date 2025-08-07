@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
+import frame from "../Images/Frame 1000003889.png";
 type policyProps = {
   heading: string;
   paragraph: string;
@@ -54,26 +55,46 @@ const Privacy_Policy = () => {
     },
   ]);
   return (
-    <div className="px-8 py-8 flex flex-col gap-2">
-      {policyData.map((policy) => (
-        <motion.div className="bg-slate-200 p-5 rounded-[10px] flex flex-col">
-          <div className=" text-gray-400 flex justify-start py-5">
-            <motion.h2
-              whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: 100 }}
-              transition={{ duration: 0.7 }}
-              className="w-[20%] flex justify-between text-center font-medium text-[1.2rem]"
-            >
-              {policy.heading}
-              <span className="border border-yellow-400 rotate-90"></span>
-            </motion.h2>
-          </div>
-          <div className="leading-7 text-gray-600 text-[1rem]">
-            <p className="text-justify">{policy.paragraph}</p>
-            <p>{policy.note}</p>
-          </div>
-        </motion.div>
-      ))}
+
+    <div className="bg-slate-200">
+      <motion.div
+        className="px-8 py-8 flex flex-col gap-6 max-w-5xl mx-auto"
+        initial="hidden"
+        animate="visible"
+      >
+        {policyData.map((policy, i) => (
+          <motion.div
+            key={i}
+            className="bg-slate-100 p-6 rounded-xl flex flex-col shadow-sm cursor-pointer"
+            whileHover="hover"
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            translate="yes"
+            transition={{ duration: 1.2 }}
+            viewport={{ once: true }}
+            layout
+          >
+            <div className="flex gap-3">
+              <img
+                src={frame}
+                alt="Logo_Green_Star"
+                className="w-[30px] h-[30px] items-start"
+              />
+              <motion.h2 className="text-lg font-semibold text-gray-700 mb-3 border-l-4 border-green-500 pl-4">
+                {policy.heading}
+              </motion.h2>
+            </div>
+
+            <div className="text-gray-600 leading-relaxed space-y-2 text-base">
+              <p>{policy.paragraph}</p>
+              {policy.note && (
+                <p className="italic text-gray-500">{policy.note}</p>
+              )}
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
+
     </div>
   );
 };
