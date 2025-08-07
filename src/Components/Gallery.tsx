@@ -12,13 +12,15 @@ const imagesArr = [
 const Photo = () => {
   return (
     <>
-      <p className="text-[#b0b0b0] font-bold px-2  text-4xl">GALLERY</p>
-      <h1 className="text-[#010382]  sm:texty text-3xl font-bold ">
-        Check our Gallery
-      </h1>
-      <div className="mx-auto flex flex-row flex-nowrap justify-center overflow-x-auto p-5 gap-4">
+      <div className="p-5 flex flex-col gap-4 overflow-x-auto">
+        <p className="text-[#b0b0b0] font-bold  text-4xl">GALLERY</p>
+        <h1 className="text-[#010382]  sm:texty text-3xl font-bold ">
+          Check our Gallery
+        </h1>
+      </div>
+      <div className="px-5 mx-auto flex flex-row flex-nowrap justify-center overflow-x-auto py-5 gap-4">
         {imagesArr.map((currImg, index) => (
-          <div key={index} className="flex-none w-40 h-80 overflow-hidden">
+          <div key={index} className="flex-none w-50 h-60 overflow-hidden">
             <img
               src={currImg}
               alt={`Image-${index}`}

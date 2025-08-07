@@ -69,7 +69,7 @@ const Privacy_Policy = () => {
             </motion.h2>
           </div>
           <div className="leading-7 text-gray-600 text-[1rem]">
-            <p>{policy.paragraph}</p>
+            <p className="text-justify">{policy.paragraph}</p>
             <p>{policy.note}</p>
           </div>
         </motion.div>
