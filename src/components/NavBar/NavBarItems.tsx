@@ -1,10 +1,15 @@
 import Navigations from "./Navigations";
 
-const NavBarItems = () => {
+type Props = {
+  onLinkClick: (id: string) => void;
+  activeSection?: string;
+};
+
+const NavBarItems = ({ onLinkClick, activeSection }: Props) => {
   return (
-    <>
-      <Navigations />
-    </>
+    <ul className="flex flex-col">
+      <Navigations onLinkClick={onLinkClick} activeSection={activeSection} />
+    </ul>
   );
 };
 

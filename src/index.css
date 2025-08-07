@@ -1,27 +1,27 @@
 @import "tailwindcss";
 
-/* @keyframes up-down {
+@keyframes up-down {
   0% {
-    transform: translateX(10px);
+    transform: translateY(5px);
   }
   100% {
-    transform: translateX(-10px);
+    transform: translateY(-5px);
   }
 }
 
 .smooth-bounce {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
-} */
+}
 
-@keyframes left-right {
+@keyframes marquee {
   0% {
-    transform: rotateX('8deg');
+    transform: translateX(0%);
   }
   100% {
-    rotate: -6deg;
+    transform: translateX(-50%);
   }
 }
 
-.smooth-arrow {
-  animation: left-right 2s ease-in infinite alternate-reverse both;
+.animate-marquee {
+  animation: marquee 20s linear infinite;
 }

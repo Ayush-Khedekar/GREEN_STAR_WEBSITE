@@ -1,17 +1,17 @@
-import img_fluid from "../Images/hero-img.png";
+import img_fluid from "../Images/E-Wallet (1).gif";
 import bgImage from "../Images/hero-bg.jpg";
 import { motion } from "motion/react";
 const Home = () => {
   return (
-    <section className="relative w-full">
+    <section className="relative w-full overflow-hidden">
       <img
         src={bgImage}
         className="absolute top-0 left-0 w-full h-[100%] !z-[-2] opacity-20"
       />
       <motion.div
-        whileInView={{ opacity: 0.8, x: 0 }}
-        initial={{ opacity: 0, x: -100 }}
-        transition={{ duration: 1.3 }}
+        whileInView={{ opacity: 0.8, y: 0 }}
+        initial={{ opacity: 0, y: 50 }}
+        transition={{ duration: 1.5 }}
         className="!z-10 bg-[#39a837] opacity-70 px-10 py-9 w-full"
       >
         <div className="sm:flex items-center gap-10 w-full">
@@ -42,13 +42,13 @@ const Home = () => {
           </motion.div>
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: -100 }}
+            initial={{ opacity: 0, x: 100 }}
             transition={{ duration: 1.5 }}
-            className="sm:w-[50%] w-full flex justify-around"
+            className="sm:w-[50%] w-full flex justify-around sm:mt-0 mt-10"
           >
             <img
               src={img_fluid}
-              className="sm:w-96 w-[80%] h-[40vh] lg:h-[70vh] sm:h-[60vh]  smooth-arrow"
+              className="w-fit h-[40vh] lg:h-[70vh] sm:h-[60vh] smooth-bounce"
               alt="fluid-img"
             />
           </motion.div>
