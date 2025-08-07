@@ -4,6 +4,10 @@ import Testimonials from "./components/Pages/Testimonials";
 import Home from "./components/Pages/Home";
 import Privacy_Policy from "./components/Pages/Privacy_Policy";
 import Contact from "./components/Pages/Contact";
+import BodyComponents from "./components/Pages/BodyComponents";
+import About from "./components/Pages/About";
+import Services from "./components/Pages/Services";
+import Photo from "./components/Gallery";
 // import InfiniteScrollCards from "./components/Pages/Moving_cards";
 
 const App = () => {
@@ -15,9 +19,15 @@ const App = () => {
           <Home />
         </section>
         <div className="bg-slate-100 h-4"></div>
-        <section id="about"></section>
-        <section id="services"></section>
-        <section id="gallery"></section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="services">
+          <Services />
+        </section>
+        <section id="gallery">
+          <Photo />
+        </section>
         <Testimonials />
         <div className="bg-slate-100 h-4"></div>
         <section id="privacy-policy">
