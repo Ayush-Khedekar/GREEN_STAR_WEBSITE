@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+/* @keyframes up-down {
+  0% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+.smooth-bounce {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+} */
+
+@keyframes left-right {
+  0% {
+    transform: rotateX('8deg');
+  }
+  100% {
+    rotate: -6deg;
+  }
+}
+
+.smooth-arrow {
+  animation: left-right 2s ease-in infinite alternate-reverse both;
+}
