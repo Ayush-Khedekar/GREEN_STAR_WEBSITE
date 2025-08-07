@@ -14,7 +14,7 @@ export interface ServiceType {
 
 const OurService = ({ ServiceProp }: { ServiceProp: ServiceType }) => {
   return (
-    <section className="bg-white text-center flex flex-row px-5 py-5">
+    <section className="bg-white text-center flex flex-row py-3 sm:mx-5 lg:py-10 ">
       <div className="flex flex-row space-x-4 items-center">
         <div
           className="

@@ -25,7 +25,7 @@ const Services = () => {
       Title: "Electricity Bill",
     },
   ];
-    const CompanyData: Business[] = [
+  const CompanyData: Business[] = [
     {
       Icons: <FaRegFaceSmileBeam />,
       Number: 209878,
@@ -48,8 +48,8 @@ const Services = () => {
     },
   ];
   return (
-    <div>
-      <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 flex gap-3 uppercase">
+    <div className="py-8">
+      <h2 className="text-2xl sm:text-3xl font-bold text-blue-900 flex ml-10 gap-3 uppercase">
         Our Service
       </h2>
       <div className="flex flex-col sm:flex-row items-center justify-start">
@@ -57,7 +57,7 @@ const Services = () => {
           <OurService ServiceProp={ServiceItem} />
         ))}
       </div>
-      <div className="flex flex-col sm:flex-row justify-between p-5 bg-[#f5f5ff] gap-4">
+      <div className="flex flex-col sm:flex-row justify-between p-5 bg-white gap-4">
         {CompanyData.map((CompanyItem) => (
           <Company companyTypes={CompanyItem} />
         ))}
