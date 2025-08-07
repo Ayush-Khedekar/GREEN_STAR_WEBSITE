@@ -58,7 +58,7 @@ const Privacy_Policy = () => {
 
     <div className="bg-slate-200">
       <motion.div
-        className="px-8 py-8 flex flex-col gap-6 max-w-5xl mx-auto"
+        className="px-8 py-15 flex flex-col gap-6 max-w-5xl mx-auto"
         initial="hidden"
         animate="visible"
       >

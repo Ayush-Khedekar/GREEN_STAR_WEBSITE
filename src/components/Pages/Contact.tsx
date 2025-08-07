@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import frame from "../Images/Frame 1000003889.png";
 const Contact = () => {
   return (
-    <div className="p-3 flex flex-col gap-2 bg-slate-300 w-full">
+    <div className="px-3 py-6 flex flex-col gap-2 bg-slate-300 w-full">
       <div className=" px-10 py-2 rounded-[10px] flex flex-col gap-5 ">
         <div className="text-gray-500 flex flex-col justify-start gap-2">
           <motion.div
