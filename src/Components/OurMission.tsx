@@ -5,7 +5,7 @@ import { images } from "../Constants/image/image-export";
 const OurMission = () => {
   return (
     <>
-      <div className="w-full  flex flex-col  sm:flex-row ">
+      <div className="w-full  flex flex-col py-3 sm:flex-row ">
         <div className="max-w-[60%] mx-auto gap-8 items-start">
           <h2 className="text-[#010382] text-3xl font-extrabold mb-3 relative block border-l-4 border-[#F9BA14] pl-4">
             Our Mission
