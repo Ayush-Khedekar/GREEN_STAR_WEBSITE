@@ -2,11 +2,12 @@ import React from "react";
 import { images } from "../Constants/image/image-export";
 
 const imagesArr = [
+  images.photo1,
+  images.photo2,
+  images.photo3,
   images.imagTech2,
   images.imagTech1,
-  images.imagTech3,
-  images.imagTech4,
-  images.imagTech5,
+  // images.imagTech3,
   images.imagTech6,
 ];
 const Photo = () => {
